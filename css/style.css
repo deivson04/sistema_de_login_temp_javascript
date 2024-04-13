@@ -1,0 +1,21 @@
+.conteudo-login {
+    border: solid 1px;
+    margin-top: 5px;
+    padding: 10px;
+}
+.btn {
+    text-align: center;
+}
+ #cad {
+    display: none;
+ }
+
+ #listalog {
+    text-align: center;
+ }
+
+ #listacad {
+    text-align: center;
+ }
+
+ 
