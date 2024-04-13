@@ -36,20 +36,20 @@ btnreg.onclick = () => {
 
     let email = emailInput.value;
     let senha = senhaInput.value;
+    
+    let objetos = {
+        email: email,
+        senha: senha
+    }
 
     if (email == '' || senha == '') {
         lis.innerHTML = "O campo não pode ser vazio!";
         lis.style.color = '#FF0000';
     } else {
+        registros.push(objetos);
         lis.innerHTML = "Cadastrado com sucesso";
         lis.style.color = '#008000';
     }
-
-    let objetos = {
-        email: email,
-        senha: senha
-    }
-    registros.push(objetos);
     limparcad();
     inserircad();
 }
@@ -60,11 +60,7 @@ let limparcad = () => {
 }
 
 let inserircad = () => {
-    registros.forEach((value) => {
-
-        console.log('Email: ' + value.email + ' Senha: ' + value.senha);
-
-    });
+    console.log(registros);
 }
 
 // Butão para logar e validações do login
@@ -82,7 +78,7 @@ btnlog.onclick = () => {
         let dados = registros.some((value) => {
 
             return value.email == email && value.senha == senha 
-        }); 
+        });
             if(dados){    
                 li.innerHTML = "Login efetuado com sucesso";
                 li.style.color = '#008000';
